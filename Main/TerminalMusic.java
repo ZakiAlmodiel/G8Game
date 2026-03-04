@@ -8,7 +8,7 @@ public class TerminalMusic {
 
     public static void playMusic() {
         try {
-            File musicFile = new File("Main/Terminalmusic.wav");
+            File musicFile = new File("G8Game/Main/Terminalmusic.wav");
             musicClip = AudioSystem.getClip();
             musicClip.open(AudioSystem.getAudioInputStream(musicFile));
             musicClip.loop(Clip.LOOP_CONTINUOUSLY);
