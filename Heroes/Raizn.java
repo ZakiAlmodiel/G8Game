@@ -1,5 +1,6 @@
-public class Raizn extends Hero {
+package Heroes;
 
+public class Raizn extends Hero {
     private static final int DAMAGE_SKILL1 = 10;
     private static final int DAMAGE_SKILL2 = 10;
     private static final int DAMAGE_SKILL3 = 35;
@@ -20,11 +21,10 @@ public class Raizn extends Hero {
               MANA_COST3);
     }
 
-    public void displayBackStory() {        // Lore
-
+    @Override
+    public void displayBackStory() {
         System.out.println("-----------------BACKSTORY-------------------");
         System.out.println();
-
         System.out.println(
             "Raizn was once just a boy from a small mountain village, " +
             "known only as Ralph to his kin. When raiders burned his home " +
@@ -34,32 +34,27 @@ public class Raizn extends Hero {
         );
     }
 
-    public void displaySkillOptions() {     // Sets of Skills
-
+    @Override
+    public void displaySkillOptions() {
         System.out.println(
-            "Skill 1 (Power Lash) | " + skillOneMultiplier +
-            " damage | " + skillOneManaCost + " Mana cost"
+            "Skill 1 (Power Lash) | " + getSkillOneMultiplier() +
+            " damage | " + getSkillOneManaCost() + " Mana cost"
         );
-
         System.out.println(
-            "Skill 2 (Shield Bash) | " + skillTwoMultiplier +
-            " damage | " + skillTwoManaCost + " Mana cost"
+            "Skill 2 (Shield Bash) | " + getSkillTwoMultiplier() +
+            " damage | " + getSkillTwoManaCost() + " Mana cost"
         );
-
         System.out.println(
-            "Skill 3 (Berserk Strike) | " + skillThreeMultiplier +
-            " damage | " + skillThreeManaCost + " Mana cost"
+            "Skill 3 (Berserk Strike) | " + getSkillThreeMultiplier() +
+            " damage | " + getSkillThreeManaCost() + " Mana cost"
         );
-
         System.out.println("Skill 4 (Heal HP)");
         System.out.println("Skill 5 (Heal Mana)");
     }
 
     @Override
-    public void preBattleDialogue() {       //Flow of Dialogues
-        System.out.printf(
-            "\nRaizn: Let's make this quick, I've got better things to do.\n"
-        );
+    public void preBattleDialogue() {
+        System.out.printf("\nRaizn: Let's make this quick, I've got better things to do.\n");
     }
 
     @Override

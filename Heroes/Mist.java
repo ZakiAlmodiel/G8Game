@@ -1,14 +1,14 @@
-public class Mist extends Hero{
+package Heroes;
 
-
-    // subject to change (stats)
+public class Mist extends Hero {
     private static final int DAMAGE_SKILL1 = 10;
     private static final int DAMAGE_SKILL2 = 20;
     private static final int DAMAGE_SKILL3 = 15;
     private static final int MANA_COST1 = 15;
     private static final int MANA_COST2 = 30;
     private static final int MANA_COST3 = 20;
-    public Mist(String name){
+    
+    public Mist(String name) {
         super(
             name,
             "Mistblade",
@@ -19,45 +19,54 @@ public class Mist extends Hero{
             DAMAGE_SKILL3,
             MANA_COST1, 
             MANA_COST2, 
-            MANA_COST3);
+            MANA_COST3
+        );
     }
-
-    public void displayBackStory(){
-        
+    
+    @Override
+    public void displayBackStory() {
         System.out.println("-----------------BACKSTORY-------------------");
         System.out.println();
         System.out.println(
-        "Mist had been a lone hunter ever since he was a child."+
-         "He wielded claw katars made from antlers,\n"+
-         "ensuring that the animals he hunted stayed dead (close-combat)."+
-         "One night, while searching for food \nin the rainforest,"+
-         "he encountered a strange, flood-like cloud sweeping through the trees."+
-         "He tried \nto run, but its speed was just unfortunately great…..");
+            "Mist had been a lone hunter ever since he was a child." +
+            "He wielded claw katars made from antlers,\n" +
+            "ensuring that the animals he hunted stayed dead (close-combat)." +
+            "One night, while searching for food \nin the rainforest," +
+            "he encountered a strange, flood-like cloud sweeping through the trees." +
+            "He tried \nto run, but its speed was just unfortunately great….."
+        );
     }
     
-    public void displaySkillOptions(){
+    @Override
+    public void displaySkillOptions() {
         System.out.println(
-            "Skill 1 (Mistblade) | " + skillOneMultiplier + 
-            " damage | " + skillOneManaCost + " Mana cost");
+            "Skill 1 (Mistblade) | " + getSkillOneMultiplier() + 
+            " damage | " + getSkillOneManaCost() + " Mana cost"
+        );
         System.out.println(
-            "Skill 2 (CloudShift) | " + skillTwoMultiplier + 
-            " damage | " + skillTwoManaCost + " Mana cost");
+            "Skill 2 (CloudShift) | " + getSkillTwoMultiplier() + 
+            " damage | " + getSkillTwoManaCost() + " Mana cost"
+        );
         System.out.println(
-            "Skill 3 (HazeShift) | " + skillThreeMultiplier + 
-            " damage | " + skillThreeManaCost + " Mana cost");
+            "Skill 3 (HazeShift) | " + getSkillThreeMultiplier() + 
+            " damage | " + getSkillThreeManaCost() + " Mana cost"
+        );
         System.out.println("Skill 4 (Heal HP)");
         System.out.println("Skill 5 (Heal Mana)");
     }
+    
     @Override
-    public void preBattleDialogue(){
+    public void preBattleDialogue() {
         System.out.printf("\nMist: My blade hungers for battle once more.\n");
-    };
+    }
+    
     @Override
-    public void victoryDialogue(){
+    public void victoryDialogue() {
         System.out.printf("\nMist: Hmph. Not even a challenge.\n");
-    };
+    }
+    
     @Override
-    public void defeatDialogue(){
+    public void defeatDialogue() {
         System.out.printf("\nMist: My... blade... betrayed me...\n");
-    };
+    }
 }
