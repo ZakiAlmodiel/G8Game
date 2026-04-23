@@ -1,9 +1,9 @@
-package Console_Levels;
+package Levels;
 import java.util.Scanner;
 
-import Console_Enemy.Console_Enemy;
-import Console_Heroes.Console_Hero;
-import Console_Story.Console_Details;
+import Enemy.Enemy;
+import Heroes.Hero;
+import Story.Details;
 
 public class Console_Level2 {
 
@@ -21,7 +21,7 @@ public class Console_Level2 {
             );
 
             boolean currentBattleWon = false;
-            Console_Details.displayCurrentDetails(hero, enemy);
+            Details.displayCurrentDetails(hero, enemy);
 
             do {
                 hero.displaySkillOptions();
@@ -111,7 +111,7 @@ public class Console_Level2 {
                     allEnemiesDefeated = false;
                     return false;
                 } else {
-                    Console_Details.displayCurrentDetails(hero, enemy);
+                    Details.displayCurrentDetails(hero, enemy);
                 }
 
             } while (!currentBattleWon);
