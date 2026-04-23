@@ -5,7 +5,7 @@ import Enemy.Enemy;
 import Heroes.Hero;
 import Story.Details;
 
-public class Console_Level2 {
+public class Level2 {
 
     static Scanner sc = new Scanner(System.in);
 
@@ -92,7 +92,7 @@ public class Console_Level2 {
                 if (enemy.enemyHp <= 0) {
                     enemy.enemyHp = 0;
                     currentBattleWon = true;
-                    Console_Details.displayCurrentDetails(hero, enemy);
+                    Details.displayCurrentDetails(hero, enemy);
                     hero.victoryDialogue();
                     System.out.println(
                         "\nCONGRATULATIONS! You have defeated the monster " +
